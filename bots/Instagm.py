@@ -11,7 +11,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
-# Locators
+################################## Locators   #################################################
 username = "//input[@name='username']"
 password = "//input[@name='password']"
 submit = "//button[@type='submit']"
@@ -22,7 +22,12 @@ share_button = "//div[contains(text(),'Share')]"
 notification = "//button[contains(text(),'Not Now')]"
 write = "//div[@aria-label='Write a caption...']"
 
+######################################## add your profile info ###################################
+
 file_path = "C:\\Users\\KloverCloud\\PycharmProjects\\project\\WebBots\\instagram\\upload\\filpng.png"
+user_info = "usemany5@gmail.com"
+user_pass = "Qwer1234@@!!"
+write_status = "hello this my first instra post"
 
 ###############################   Start   ##################################
 
@@ -46,10 +51,10 @@ try:
 except:
     print("no Alert found")
 
-driver.find_element(By.XPATH, username).send_keys("usemany5@gmail.com")
+driver.find_element(By.XPATH, username).send_keys(user_info)
 time.sleep(2)
 
-driver.find_element(By.XPATH, password).send_keys("Qwer1234@@!!")
+driver.find_element(By.XPATH, password).send_keys(user_pass)
 time.sleep(2)
 
 driver.find_element(By.XPATH, submit).click()
@@ -79,7 +84,7 @@ except TimeoutException as e:
 except InvalidSessionIdException as e:
     print("InvalidSessionIdException", e)
 
-driver.find_element(By.XPATH, "//button[text()='Select from computer']").click()
+driver.find_element(By.XPATH, upload_button).click()
 time.sleep(5)
 
 pyautogui.typewrite(file_path)
@@ -94,7 +99,7 @@ time.sleep(2)
 driver.find_element(By.XPATH, next_button).click()
 time.sleep(3)
 
-driver.find_element(By.XPATH, write).send_keys('hello dear window')
+driver.find_element(By.XPATH, write).send_keys(write_status)
 time.sleep(5)
 
 driver.find_element(By.XPATH, share_button).click()
