@@ -25,8 +25,8 @@ write = "//div[@aria-label='Write a caption...']"
 ######################################## add your profile info ###################################
 
 file_path = "C:\\Users\\KloverCloud\\PycharmProjects\\project\\WebBots\\instagram\\upload\\filpng.png"
-user_info = "usemany5@gmail.com"
-user_pass = "Qwer1234@@!!"
+user_info = "email"
+user_pass = "password"
 write_status = "hello this my first instra post"
 
 ###############################   Start   ##################################
